@@ -47,7 +47,7 @@ function Scene(props: {
 }) {
   const modelRotation = props.modelRotation || [0, 0, 0];
   const unifiedRotation: [number, number, number] = [props.rotation[0] + modelRotation[0], props.rotation[1] + modelRotation[1], props.rotation[2] + modelRotation[2]];
-  const {scene} = useGLTF(props.gltf);
+  const {scene} = useGLTF(props.gltf || '/test.glb');
 
   if (props.gltf) {
     return (
